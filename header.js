@@ -4,7 +4,7 @@ document.write('\
 <nav class="navbar navbar-default navbar-fixed-top">\
   <div class="container">\
       <div class="navbar-header">\
-        <a class="navbar-brand brand" href="https://www.arabsera.org/course/ai-engineering">AI Engineering</a>\
+        <a class="navbar-brand brand" href="https://arabsera-aieng.github.io/">AI Engineering</a>\
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">\
                 <span class="icon-bar"></span>\
                 <span class="icon-bar"></span>\
