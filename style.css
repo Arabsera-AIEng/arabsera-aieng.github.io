@@ -1,14 +1,27 @@
-body {
+/****************************************************
+ * NEW COLOR SCHEME - Professional & Modern
+ * Primary:  #2c3e50  (dark slate blue - navbar & main accent)
+ * Accent:   #2980b9  (cool blue for headings & highlights)
+ * Text:     #333     (standard near-black for body text)
+ * Whites:   #ecf0f1  (light gray for backgrounds / text)
+ * Success:  #2ecc71  (used to replace bright green areas)
+ * 
+ * Feel free to adjust values to match your brand.
+ ****************************************************/
+
+ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 16px;
     padding-top: 70px;
+    color: #333; /* Default text color */
 }
 
 p {
     text-align: justify;
 }
 
+/* Header Section */
 #header {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -18,20 +31,22 @@ h1 {
     font-size: 30px;
     font-weight: 300;
     text-align: center;
+    color: #2c3e50; /* Tie it to primary color */
 }
 
 h2 {
     font-size: 25px;
-    /* font-weight: 300; */
     font-weight: bold;
-    color: #8c1515;
+    color: #2980b9; /* Accent color */
 }
 
 h3 {
     font-size: 20px;
     font-weight: bold;
+    color: #2c3e50;
 }
 
+/* Lists & Misc */
 .lhead {
     font-weight: normal;
     margin-top: 5px;
@@ -41,20 +56,24 @@ h3 {
     margin-top: 5px;
 }
 
+/* Footer */
 #footer {
     height: 100px;
     padding-top: 50px;
     text-align: center;
     position: relative;
+    color: #333;
 }
 
+/* Instructor Photo (circular) */
 .instructorphoto img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 3px solid #1abc9c;
+    border: 3px solid #2980b9; /* Updated accent border */
 }
 
+/* Logos */
 .logo-left {
     height: 80px;
     float: left;
@@ -69,6 +88,7 @@ h3 {
     margin-bottom: 20px;
 }
 
+/* Instructor Display */
 .instructor {
     display: inline-block;
     width: 160px;
@@ -79,6 +99,7 @@ h3 {
     vertical-align: top;
 }
 
+/* Section & Highlighting */
 .sec {
     margin-bottom: 10px;
     padding-top: 10px;
@@ -86,11 +107,12 @@ h3 {
 }
 
 .sechighlight {
-    background-color: #f7f6f1;
+    background-color: #f0f5f8; /* A softer background than #f7f6f1 */
 }
 
+/* Text tags & small blocks */
 .tt {
-    color: #060;
+    color: #2980b9; /* Tie to accent color */
     display: inline-block;
 }
 
@@ -106,25 +128,29 @@ h3 {
     margin-bottom: 5px;
 }
 
+/* Activation map */
 .actmap {
     display: block;
     border: 2px solid #FFF;
 }
 
+/* Convnet Visualization */
 #convnetvis {
     text-align: center;
 }
 
+/* .pp background */
 .pp {
     color: white;
     text-align: left;
     padding: 5px;
     height: 32px;
     margin: 2px;
-    background-color: rgb(85, 187, 85);
+    background-color: #2ecc71; /* Replaces bright green with a modern "success" green */
     overflow: visible !important;
 }
 
+/* Floating Conv Ask icon */
 #convask {
     position: absolute;
     top: 360px;
@@ -134,20 +160,23 @@ h3 {
     cursor: pointer;
 }
 
+/* Explanation Box */
 #explain {
     display: none;
-    background-color: #FF9;
+    background-color: #fffa9c; /* Soft yellow highlight (replaces #FF9) */
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
 }
 
+/* Q & A styling */
 .qq {
-    color: #060;
+    color: #2980b9; /* Accent color */
 }
 
 .qa {
     font-style: italic;
+    color: #333;
 }
 
 .qqa {
@@ -158,10 +187,12 @@ h3 {
     font-weight: normal;
 }
 
+/* Course Description */
 #coursedesc {
     text-align: justify;
 }
 
+/* Class Icons */
 #classicons {
     position: absolute;
     bottom: 20px;
@@ -173,70 +204,71 @@ h3 {
 }
 
 .red {
-    color: #FF0000;
+    color: #e74c3c; /* A more modern red if needed */
 }
 
-
-/* Navbar color / spacing */
+/****************************************************
+ * NAVBAR STYLING
+ ****************************************************/
 
 .navbar-default {
-    background-color: rgb(148, 6, 6);
-    border-color: rgb(255, 255, 255);
+    background-color: #2c3e50; /* Primary color */
+    border-color: #34495e;    /* Slightly lighter for the border */
     text-align: center;
 }
 
 .navbar-default .navbar-brand {
-    color: #ecf0f1;
+    color: #ecf0f1;           /* Light gray/white brand text */
     font-weight: bold;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #223503;
+    color: #1abc9c;           /* A bright hover color */
 }
 
 .navbar-default .navbar-text {
     color: #ecf0f1;
 }
 
-.navbar-default .navbar-collapse>ul {
+.navbar-default .navbar-collapse > ul {
     width: 84%;
 }
 
-.navbar-default .navbar-collapse>ul>li {
+.navbar-default .navbar-collapse > ul > li {
     width: 12.5%;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
     color: #ffffff;
 }
 
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {
-    color: #223503;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #1abc9c;           /* Hover accent */
 }
 
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
-    color: #223503;
-    background-color: #c0392b;
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ecf0f1;
+    background-color: #1abc9c; /* Active background */
 }
 
-.navbar-default .navbar-nav>.open>a,
-.navbar-default .navbar-nav>.open>a:hover,
-.navbar-default .navbar-nav>.open>a:focus {
-    color: #223503;
-    background-color: #c0392b;
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #ecf0f1;
+    background-color: #1abc9c;
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #c0392b;
+    border-color: #1abc9c;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #223503;
+    background-color: #1abc9c;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -253,17 +285,20 @@ h3 {
 }
 
 .navbar-default .navbar-link:hover {
-    color: #fbcbcc;
+    color: #bdc3c7;
 }
 
-/* Handle formatting on mobile */
-
+/****************************************************
+ * RESPONSIVE / MOBILE STYLES
+ ****************************************************/
 @media (max-width: 767px) {
-    .navbar-default .navbar-collapse>ul>li {
+    
+    .navbar-default .navbar-collapse > ul > li {
         width: 100%;
         text-align: left;
     }
-    /* Force table to not be like tables anymore */
+
+    /* Force table to behave responsively, not like a standard table */
     table,
     thead,
     tbody,
@@ -272,28 +307,32 @@ h3 {
     tr {
         display: block;
     }
-    /* Hide table headers (but not display: none;, for accessibility) */
+
+    /* Hide table headers (but do not display: none for accessibility) */
     thead tr {
         position: absolute;
         top: -9999px;
         left: -9999px;
     }
+
     /* Make each row look like a card */
     table tr {
         margin-bottom: 20px;
         border-bottom: 2px solid #ddd;
         box-shadow: 2px 2px 1px #dadada;
     }
+
     tr {
         border: 1px solid #ccc;
     }
-    /* Behave  like a "row" */
+
     td {
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;
         padding-left: 50%;
     }
+
     /* Position table header as data labels */
     td:before {
         top: 6px;
@@ -302,7 +341,8 @@ h3 {
         padding-right: 10px;
         white-space: nowrap;
     }
-    /* Label the data */
+
+    /* Label the data in the schedule table */
     #schedule td:nth-of-type(1) {
         font-weight: 500;
     }
