@@ -49,9 +49,10 @@ h3 {
 }
 
 .instructorphoto img {
-    width: 150px;
-    border-radius: 140px;
-    margin-bottom: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #1abc9c;
 }
 
 .logo-left {
@@ -254,7 +255,6 @@ h3 {
 .navbar-default .navbar-link:hover {
     color: #fbcbcc;
 }
-
 
 /* Handle formatting on mobile */
 
