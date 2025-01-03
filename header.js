@@ -17,6 +17,7 @@ document.write('\
           <ul class="nav navbar-nav navbar-right">\
               <li><a href="index.html#overview">Overview</a></li>\
               <li><a href="syllabus.html">Syllabus</a></li>\
+              <li><a href="aieng_track.html">AI Engineering Track</a></li>\
           </ul>\
       </div>\
   </div>\
