@@ -2,688 +2,509 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>AI Engineering Multi-Track Syllabus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
+    <title>AI Engineering | Full Track </title>
+
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <!-- Optional: Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-    
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Custom Inline CSS for Professional Look -->
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: #fafafa;
+            background-color: #f9f9f9;
+            margin: 0; 
+            padding: 0;
         }
         .heading {
             text-align: center;
-            margin-top: 30px;
-            margin-bottom: 50px;
+            margin-top: 50px;
+            margin-bottom: 40px;
         }
         .heading h1 {
             font-weight: 500;
-            margin-bottom: 10px;
         }
         .heading p {
-            font-size: 16px;
-            color: #777;
+            color: #666;
+            margin-top: 10px;
         }
-        .track-section {
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .course-section {
             margin-bottom: 60px;
         }
-        .track-section h2 {
-            margin-top: 30px;
-            margin-bottom: 20px;
+        .course-section h2 {
             color: #333;
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
+            margin-bottom: 20px;
         }
-        .table > thead > tr > th {
+        .panel {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+        }
+        .panel h3 {
+            margin-top: 0;
+        }
+        .table th {
             background-color: #f5f5f5;
             font-weight: 500;
         }
-        /* Panel styling for a more "professional" look */
-        .panel {
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background: #fff;
-        }
-        .panel .panel-heading {
-            background: #f5f5f5;
-            border-bottom: 1px solid #ddd;
-            font-size: 18px;
-            font-weight: 500;
+        /* Optional: Add a subtle hover effect for table rows */
+        .table tbody tr:hover {
+            background-color: #f0f8ff;
         }
     </style>
 </head>
+
 <body>
 
 <div class="container">
-    <!-- Page Heading / Overview -->
+    <!-- Main Heading -->
     <div class="heading">
-        <h1>AI Engineering Multi-Track Syllabus</h1>
+        <h1>AI Engineering Track</h1>
         <p>
-            Welcome to the comprehensive AI Engineering program. The following tracks cover the end-to-end 
-            lifecycle of building, deploying, and maintaining modern machine learning systems at scale. 
-            Each track stands alone but can be taken sequentially or in parallel for a holistic learning experience.
+            This integrated program is organized into multiple component courses. 
+            Progress sequentially for a complete end-to-end understanding of AI engineering, 
+            or pick and choose based on your background and interests.
         </p>
     </div>
 
-    <!-- Track 1: Data Engineering & ML Pipelines -->
-    <div class="track-section" id="track-data-eng">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Track 1: Data Engineering & ML Pipelines</h2>
-            </div>
-            <div class="panel-body">
-                <p>
-                    Focuses on designing robust, scalable data pipelines for ML. Explores ingestion, transformation, 
-                    orchestration, and feature store management.
-                </p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">Session</th>
-                            <th style="width: 20%">Topic</th>
-                            <th style="width: 20%">Objectives</th>
-                            <th style="width: 20%">Key Tools/Focus</th>
-                            <th style="width: 20%">References & Materials</th>
-                            <th style="width: 15%">Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Foundations of Data Engineering</td>
-                            <td>Understand data lakes, data warehouses, batch vs. streaming</td>
-                            <td>Conceptual Architecture, ETL vs. ELT</td>
-                            <td>
-                                <ul>
-                                    <li>Source 1: Ch. 3 (Data Engineering Fundamentals)</li>
-                                    <li>Source 2: Ch. 4 (Data Journey & Storage)</li>
-                                </ul>
-                            </td>
-                            <td>High-level overview of the data landscape</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Ingestion & ETL Concepts</td>
-                            <td>Parse and validate raw data, standardize schema</td>
-                            <td>Airbyte / Custom Python Scripts, File Formats (Parquet, Avro, etc.)</td>
-                            <td>
-                                <ul>
-                                    <li>CSV/Parquet/Avro tutorials</li>
-                                    <li>Short reading on schema evolution</li>
-                                </ul>
-                            </td>
-                            <td>Hands-on labs with ingestion tools</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Orchestration & Workflow Management</td>
-                            <td>Automate end-to-end pipelines</td>
-                            <td>Apache Airflow, Kubeflow Pipelines, Luigi</td>
-                            <td>
-                                <ul>
-                                    <li>Official Airflow docs</li>
-                                    <li>Kubeflow Pipelines tutorials</li>
-                                </ul>
-                            </td>
-                            <td>Build a simple pipeline from raw data to curated dataset</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Data Transformation & Feature Stores</td>
-                            <td>Engineer & store consistent features for offline & online use</td>
-                            <td>Apache Spark/Beam, Feast/Hopsworks</td>
-                            <td>
-                                <ul>
-                                    <li>Source 1: Ch. 5 (Feature Engineering) [if available]</li>
-                                    <li>Source 2: Ch. 3 (Feature Engineering & Selection)</li>
-                                </ul>
-                            </td>
-                            <td>Design feature stores for production ML</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Scaling Data Pipelines</td>
-                            <td>Ensure pipeline reliability & fault-tolerance</td>
-                            <td>AWS Glue, GCP Dataflow, CI/CD for data workflows</td>
-                            <td>
-                                <ul>
-                                    <li>Cloud provider docs</li>
-                                    <li>CI/CD best practices</li>
-                                </ul>
-                            </td>
-                            <td>Focus on concurrency, partitioning, and cost</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Guest Lecture & Case Study</td>
-                            <td>Real-world insights from enterprise data teams</td>
-                            <td>Architecture Scalability, Team Practices</td>
-                            <td>Speaker slides, industry examples</td>
-                            <td>Interactive Q&A session</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Final Project & Review</td>
-                            <td>Present end-to-end data pipeline</td>
-                            <td>All Tools Combined</td>
-                            <td>Project guidelines, peer review rubrics</td>
-                            <td>Capstone demonstration</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Course 1: Data Exploration & Feature Engineering -->
+    <div class="course-section" id="course-data-exploration">
+        <div class="panel">
+            <h2>Course 1: Data Exploration & Feature Engineering</h2>
+            <p>
+                Covers data exploration, cleaning, transformation, and feature engineering techniques. 
+                Also includes strategies for reducing feature sets through selection or dimensionality reduction.
+            </p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Topic</th>
+                        <th style="width: 35%">Objective</th>
+                        <th style="width: 35%">Key Tools &amp; Focus (Open Source)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Profiling & Exploration</td>
+                        <td>Learn how to understand data distributions, detect anomalies, and identify outliers</td>
+                        <td>
+                            <ul>
+                                <li>pandas-profiling / ydata-profiling</li>
+                                <li>Jupyter Notebooks</li>
+                                <li>Matplotlib/Seaborn for visualization</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cleaning & Preprocessing</td>
+                        <td>Handle missing values, outliers, and categorical encoding</td>
+                        <td>
+                            <ul>
+                                <li>pandas, scikit-learn</li>
+                                <li>OpenRefine (optional UI-based data cleaning)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Data Pipelines & Orchestration</td>
+                        <td>Build reproducible data pipelines for transformations and loading</td>
+                        <td>
+                            <ul>
+                                <li>Apache Airflow / Luigi</li>
+                                <li>Docker (for containerizing tasks)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feature Engineering Techniques</td>
+                        <td>Create, transform, and select features to improve model performance</td>
+                        <td>
+                            <ul>
+                                <li>scikit-learn (FeatureUnion, Pipelines)</li>
+                                <li>Feature Stores (Feast)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feature Selection & Dimensionality Reduction</td>
+                        <td>Reduce feature set via PCA, RFE, mutual information, etc.</td>
+                        <td>
+                            <ul>
+                                <li>scikit-learn (PCA, RFE)</li>
+                                <li>UMAP (for manifold learning)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Final Consolidation & Advanced Exploration</td>
+                        <td>Develop an end-to-end data exploration & feature engineering pipeline</td>
+                        <td>
+                            <ul>
+                                <li>Python Scripts + Docker</li>
+                                <li>Version Control (Git/GitHub)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <!-- Track 2: Advanced Model Deployment & MLOps -->
-    <div class="track-section" id="track-mlops">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Track 2: Advanced Model Deployment & MLOps</h2>
-            </div>
-            <div class="panel-body">
-                <p>
-                    Covers production-grade model deployment strategies, CI/CD for ML, 
-                    containerization, and managing ML services under real-world SLAs.
-                </p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">Session</th>
-                            <th style="width: 20%">Topic</th>
-                            <th style="width: 20%">Objectives</th>
-                            <th style="width: 20%">Key Tools/Focus</th>
-                            <th style="width: 20%">References & Materials</th>
-                            <th style="width: 15%">Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Introduction to MLOps</td>
-                            <td>Compare DevOps vs. MLOps, set up a basic CI/CD pipeline</td>
-                            <td>GitHub Actions, Jenkins, MLflow</td>
-                            <td>
-                                <ul>
-                                    <li>Source 1: Ch. 2 (ML Systems Design)</li>
-                                    <li>Source 2: Ch. 1 (ML Production Systems)</li>
-                                </ul>
-                            </td>
-                            <td>Foundation for the rest of the track</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Serving Patterns & Inference Optimization</td>
-                            <td>Discuss batch vs. online inference, A/B testing</td>
-                            <td>TFX Serving, Seldon Core, Canary Releases</td>
-                            <td>
-                                <ul>
-                                    <li>Source 2: Ch. 11-12 (Model Serving Patterns)</li>
-                                    <li>TensorFlow Serving docs</li>
-                                </ul>
-                            </td>
-                            <td>Scalable & resilient architectures</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Containerization & Orchestration</td>
-                            <td>Package models in Docker, deploy to Kubernetes</td>
-                            <td>Docker, Kubernetes, Helm</td>
-                            <td>
-                                <ul>
-                                    <li>Docker/K8s official tutorials</li>
-                                    <li>Kubeflow, Seldon Core examples</li>
-                                </ul>
-                            </td>
-                            <td>Hands-on: containerize a trained model</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>CI/CD for ML</td>
-                            <td>Automate build-test-deploy for data & model updates</td>
-                            <td>TFX, Jenkins, GitLab CI</td>
-                            <td>
-                                <ul>
-                                    <li>MLflow/TensorBoard for experiment tracking</li>
-                                    <li>Data/Model versioning examples</li>
-                                </ul>
-                            </td>
-                            <td>Ensure reproducibility across environment</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Infrastructure as Code (IaC)</td>
-                            <td>Provision ML environments programmatically</td>
-                            <td>Terraform, CloudFormation, GCP Deployment Manager</td>
-                            <td>Official Terraform docs, best practices</td>
-                            <td>Reproducible multi-cloud deployments</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Compliance & Regulatory Considerations</td>
-                            <td>Address GDPR, CCPA, data residency, model bias</td>
-                            <td>GDPR/CCPA guidelines, risk assessment</td>
-                            <td>
-                                <ul>
-                                    <li>Source 2: Ch. 17 (Privacy & Legal Requirements)</li>
-                                    <li>Guest lecture from a compliance expert</li>
-                                </ul>
-                            </td>
-                            <td>Ensuring legal & ethical obligations</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Real-Time Monitoring & Alerting</td>
-                            <td>Track model performance, detect drifts or anomalies</td>
-                            <td>Prometheus, Grafana, Logging frameworks</td>
-                            <td>
-                                <ul>
-                                    <li>Source 2: Ch. 16 (Monitoring & Logging)</li>
-                                    <li>SLA/SLO tutorials</li>
-                                </ul>
-                            </td>
-                            <td>Automated alerts & performance metrics</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Capstone & Final Review</td>
-                            <td>Build a fully automated deployment pipeline</td>
-                            <td>All MLOps Tools Combined</td>
-                            <td>Project instructions, peer feedback</td>
-                            <td>Present end-to-end MLOps solution</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Course 2: Model Training & Reducing ML Footprint -->
+    <div class="course-section" id="course-model-training">
+        <div class="panel">
+            <h2>Course 2: Model Training & Reducing ML Footprint</h2>
+            <p>
+                Focuses on efficient model training strategies at various scales, 
+                along with techniques to reduce resource usage (e.g., pruning, quantization, distillation).
+            </p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Topic</th>
+                        <th style="width: 35%">Objective</th>
+                        <th style="width: 35%">Key Tools &amp; Focus (Open Source)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Resource-Aware Training Fundamentals</td>
+                        <td>Profile and measure the computational cost of model training</td>
+                        <td>
+                            <ul>
+                                <li>PyTorch/TensorFlow (Open Source ML frameworks)</li>
+                                <li>TensorBoard or Weights & Biases (free tier for experiment tracking)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mini-Batching & Checkpointing</td>
+                        <td>Optimize training throughput and memory usage</td>
+                        <td>
+                            <ul>
+                                <li>PyTorch DataLoader, Hugging Face Datasets</li>
+                                <li>Checkpoint strategies (ModelCheckpoint in PyTorch Lightning)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Model Architecture Optimization</td>
+                        <td>Utilize smaller, more efficient network designs</td>
+                        <td>
+                            <ul>
+                                <li>MobileNet, EfficientNet (open implementations)</li>
+                                <li>Knowledge Distillation libraries (e.g., PyTorch examples)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pruning & Quantization</td>
+                        <td>Reduce model size and latency without severe performance loss</td>
+                        <td>
+                            <ul>
+                                <li>TensorFlow Model Optimization Toolkit</li>
+                                <li>PyTorch Pruning & Quantization APIs</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Distributed & Parallel Training</td>
+                        <td>Scale training to multiple GPUs or machines</td>
+                        <td>
+                            <ul>
+                                <li>Horovod, PyTorch DDP</li>
+                                <li>Ray Train (for distributed Python)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Edge & On-Device Deployment Prep</td>
+                        <td>Prepare lightweight models for edge or mobile environments</td>
+                        <td>
+                            <ul>
+                                <li>TensorFlow Lite, ONNX</li>
+                                <li>Quantized inference on minimal hardware</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <!-- Track 3: Monitoring & Continual Learning -->
-    <div class="track-section" id="track-monitoring">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Track 3: Monitoring & Continual Learning</h2>
-            </div>
-            <div class="panel-body">
-                <p>
-                    Addresses distribution shifts, concept drift, and advanced techniques for 
-                    re-training models automatically in response to real-time data changes.
-                </p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">Session</th>
-                            <th style="width: 20%">Topic</th>
-                            <th style="width: 20%">Objectives</th>
-                            <th style="width: 20%">Key Tools/Focus</th>
-                            <th style="width: 20%">References & Materials</th>
-                            <th style="width: 15%">Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Data Distribution Shifts</td>
-                            <td>Identify & classify types of drift</td>
-                            <td>Statistical Tests, KL Divergence, PSI</td>
-                            <td>
-                                <ul>
-                                    <li>Source 1: Ch. 8 (Data Distribution Shifts)</li>
-                                    <li>Blog: “Detecting Data Drift in Real-Time”</li>
-                                </ul>
-                            </td>
-                            <td>Real examples of concept vs. data drift</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Monitoring at Scale</td>
-                            <td>Set up robust metrics & alerting pipelines</td>
-                            <td>Prometheus, Grafana, SLA/SLO concepts</td>
-                            <td>Source 2: Ch. 16 (Model Monitoring)</td>
-                            <td>Hands-on labs with dashboards & alerts</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Shadow & Canary Deployments</td>
-                            <td>Safely test new models in production</td>
-                            <td>A/B testing, progressive rollouts</td>
-                            <td>
-                                <ul>
-                                    <li>Seldon Core canary examples</li>
-                                    <li>eCommerce search re-rank case study</li>
-                                </ul>
-                            </td>
-                            <td>Minimize risk during model updates</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Automated Re-Training & Scheduling</td>
-                            <td>Trigger pipelines upon drift detection</td>
-                            <td>Airflow DAGs, Kubeflow Pipelines</td>
-                            <td>
-                                <ul>
-                                    <li>Source 1: Ch. 9 (Continual Learning & Test in Prod)</li>
-                                    <li>TFX pipeline for automated re-training</li>
-                                </ul>
-                            </td>
-                            <td>Implement detection + re-training loop</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Online Learning Approaches</td>
-                            <td>Adapt models continuously to new data</td>
-                            <td>Bandit Algorithms, Incremental Training</td>
-                            <td>
-                                <ul>
-                                    <li>Articles on streaming ML (Flink/Spark)</li>
-                                    <li>Source 2: Ch. 18 (Orchestrating ML Pipelines)</li>
-                                </ul>
-                            </td>
-                            <td>Balance training cost vs. model freshness</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Guest Lecture & Real Use Cases</td>
-                            <td>Discuss pitfalls & best practices</td>
-                            <td>Industry Examples of Drift & Monitoring</td>
-                            <td>Speaker slides, Q&A</td>
-                            <td>Interactive discussion around large-scale systems</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Project & Final Presentations</td>
-                            <td>Build a full monitoring & re-training loop</td>
-                            <td>All Tools Combined</td>
-                            <td>Project guidelines, evaluation rubrics</td>
-                            <td>Demonstrate dynamic pipeline in action</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Course 3: Advanced Model Deployment & MLOps -->
+    <div class="course-section" id="course-mlops">
+        <div class="panel">
+            <h2>Course 3: Advanced Model Deployment & MLOps</h2>
+            <p>
+                Delve into continuous integration, containerization, and production-grade model serving 
+                techniques using open-source platforms and best practices.
+            </p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Topic</th>
+                        <th style="width: 35%">Objective</th>
+                        <th style="width: 35%">Key Tools &amp; Focus (Open Source)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Intro to MLOps & CI/CD</td>
+                        <td>Automate build, test, and deploy steps for ML pipelines</td>
+                        <td>
+                            <ul>
+                                <li>Jenkins, GitHub Actions</li>
+                                <li>MLflow for model tracking</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Containerization & Orchestration</td>
+                        <td>Package and deploy ML services reliably at scale</td>
+                        <td>
+                            <ul>
+                                <li>Docker, Kubernetes (K8s)</li>
+                                <li>Helm charts (for K8s apps)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Serving Patterns & Inference Optimization</td>
+                        <td>Distinguish batch vs. online serving, handle A/B or canary rollouts</td>
+                        <td>
+                            <ul>
+                                <li>Seldon Core, KFServing (Kubeflow Serving)</li>
+                                <li>HTTP/gRPC inference interfaces</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Versioning & Reproducibility</td>
+                        <td>Ensure consistent deployments using code, data, and model version control</td>
+                        <td>
+                            <ul>
+                                <li>DVC (Data Version Control)</li>
+                                <li>Git-based approaches (monorepo or multi-repo)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Infrastructure as Code (IaC)</td>
+                        <td>Provision and manage ML environments in a repeatable manner</td>
+                        <td>
+                            <ul>
+                                <li>Terraform (open source)</li>
+                                <li>Ansible for configuration management</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Security & Governance Basics</td>
+                        <td>Implement secure authentication/authorization and governance for ML artifacts</td>
+                        <td>
+                            <ul>
+                                <li>Open Policy Agent (OPA)</li>
+                                <li>HashiCorp Vault (open source secrets management)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <!-- Track 4: Generative AI (with RAG & Agentic AI) -->
-    <div class="track-section" id="track-generative-ai">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Track 4: Generative AI</h2>
-            </div>
-            <div class="panel-body">
-                <p>
-                    Dive into the world of Large Language Models, Diffusion Models, and Generative Adversarial Networks. 
-                    Explore RAG (Retrieval-Augmented Generation) approaches, agentic AI concepts, and advanced deployment 
-                    strategies for real-world generative applications.
-                </p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">Session</th>
-                            <th style="width: 20%">Topic</th>
-                            <th style="width: 20%">Objectives</th>
-                            <th style="width: 20%">Key Tools/Focus</th>
-                            <th style="width: 20%">References & Materials</th>
-                            <th style="width: 15%">Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Foundations of Generative Models</td>
-                            <td>Overview of VAEs, GANs, Transformers</td>
-                            <td>Basic architectures (GAN, VAE), GPT-like Transformers</td>
-                            <td>
-                                <ul>
-                                    <li>Survey paper: “Generative Models Overview”</li>
-                                    <li>Source 2: Possibly Ch. 22 (Generative AI)</li>
-                                </ul>
-                            </td>
-                            <td>Historical context & major breakthroughs</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Large Language Models (LLMs)</td>
-                            <td>Understand GPT/BERT-based modeling, fine-tuning tasks</td>
-                            <td>Hugging Face Transformers, PyTorch, TensorFlow</td>
-                            <td>
-                                <ul>
-                                    <li>OpenAI GPT architecture notes</li>
-                                    <li>Hugging Face tutorials</li>
-                                </ul>
-                            </td>
-                            <td>Hands-on fine-tuning for domain tasks</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>RAG (Retrieval-Augmented Generation) I</td>
-                            <td>Combine LLMs with external knowledge sources</td>
-                            <td>Vector Databases (FAISS, Milvus), Retrievers</td>
-                            <td>
-                                <ul>
-                                    <li>Docs on FAISS for similarity search</li>
-                                    <li>Tutorial: “RAG with a knowledge base”</li>
-                                </ul>
-                            </td>
-                            <td>Build QA systems with relevant context injection</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>RAG (Retrieval-Augmented Generation) II</td>
-                            <td>Advanced RAG pipeline design & optimization</td>
-                            <td>Hybrid retrieval, caching, large-scale indexing</td>
-                            <td>
-                                <ul>
-                                    <li>Research articles on RAG efficiency</li>
-                                    <li>LangChain/Prompt orchestration frameworks</li>
-                                </ul>
-                            </td>
-                            <td>Minimize latency & maintain high retrieval accuracy</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Agentic AI Concepts</td>
-                            <td>Explore autonomous agents using LLMs</td>
-                            <td>Agent frameworks (Auto-GPT, BabyAGI), multi-step reasoning</td>
-                            <td>
-                                <ul>
-                                    <li>Blog: “Agentic AI—Promises and Perils”</li>
-                                    <li>Open-source Auto-GPT demos</li>
-                                </ul>
-                            </td>
-                            <td>Ethical and safety implications in agentic systems</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Diffusion Models & Image Generation</td>
-                            <td>Understand stable diffusion and text-to-image processes</td>
-                            <td>Stable Diffusion, DALL·E-like architectures</td>
-                            <td>
-                                <ul>
-                                    <li>Stable Diffusion math & code demos</li>
-                                    <li>GitHub examples of text-to-image pipelines</li>
-                                </ul>
-                            </td>
-                            <td>Discuss resource costs and training stability</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Ethical & Responsible Generative AI</td>
-                            <td>Address bias, hallucination, content moderation</td>
-                            <td>Policy constraints, detection of harmful outputs</td>
-                            <td>
-                                <ul>
-                                    <li>Ethical frameworks and guidelines</li>
-                                    <li>Case studies of generative misuse</li>
-                                </ul>
-                            </td>
-                            <td>Alignment & responsible AI practices</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Deploying Generative Models at Scale</td>
-                            <td>Optimize inference, handle high throughput requests</td>
-                            <td>GPU/TPU scaling, model parallelism, caching</td>
-                            <td>
-                                <ul>
-                                    <li>Source 2: Ch. 13 (Model Serving Infrastructure)</li>
-                                    <li>Multi-modal streaming solutions</li>
-                                </ul>
-                            </td>
-                            <td>Cost optimization and load balancing</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Prompt Engineering & Fine-Tuning</td>
-                            <td>Learn advanced prompting, RLHF, LoRA adapters</td>
-                            <td>LoRA, RLHF frameworks, advanced training scripts</td>
-                            <td>
-                                <ul>
-                                    <li>Articles on Low-Rank Adaptation</li>
-                                    <li>RLHF open-source references</li>
-                                </ul>
-                            </td>
-                            <td>Hands-on: fine-tune a model with minimal resources</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Real-World Use Cases & Guest Lecture</td>
-                            <td>Creative AI (art, copywriting), enterprise automation</td>
-                            <td>Live demos, success stories, best practices</td>
-                            <td>Speaker from an AI product startup or research lab</td>
-                            <td>Focus on ROI & user experience</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>Capstone & Final Showcase</td>
-                            <td>Build & deploy a generative app end-to-end</td>
-                            <td>All Tools Combined</td>
-                            <td>Project guidelines, peer & instructor feedback</td>
-                            <td>Demonstration of creativity & scale</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Course 4: Monitoring & Continual Learning -->
+    <div class="course-section" id="course-monitoring">
+        <div class="panel">
+            <h2>Course 4: Monitoring & Continual Learning</h2>
+            <p>
+                Learn how to track model performance, detect data or concept drift, and 
+                retrain models in an automated fashion using open-source technologies.
+            </p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Topic</th>
+                        <th style="width: 35%">Objective</th>
+                        <th style="width: 35%">Key Tools &amp; Focus (Open Source)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data & Concept Drift Detection</td>
+                        <td>Recognize shifts in input data or model predictions over time</td>
+                        <td>
+                            <ul>
+                                <li>Alibi Detect, River (online ML library)</li>
+                                <li>Statistical drift metrics (KL, PSI)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Monitoring Metrics & Alerts</td>
+                        <td>Set up real-time dashboards and alerting triggers</td>
+                        <td>
+                            <ul>
+                                <li>Prometheus (metrics collection)</li>
+                                <li>Grafana (dashboarding)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Shadow & Canary Deployments</td>
+                        <td>Experiment with new models in production while minimizing risk</td>
+                        <td>
+                            <ul>
+                                <li>Seldon Core canary features</li>
+                                <li>Istio (traffic splitting)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Automated Re-Training & Scheduling</td>
+                        <td>Trigger pipeline reruns upon drift detection or stale performance</td>
+                        <td>
+                            <ul>
+                                <li>Apache Airflow or Kubeflow Pipelines</li>
+                                <li>Python scheduling libraries (e.g., APScheduler)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Online Learning Approaches</td>
+                        <td>Continuously adapt model parameters with incoming data</td>
+                        <td>
+                            <ul>
+                                <li>River library (incremental learning)</li>
+                                <li>Bandit algorithms for dynamic exploration</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Long-Term Maintenance</td>
+                        <td>Review governance, version control, and archiving for model lifecycles</td>
+                        <td>
+                            <ul>
+                                <li>GitOps for pipeline definitions</li>
+                                <li>MLflow for extended model registry usage</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <!-- Track 5: Model Training & Reducing ML Footprint -->
-    <div class="track-section" id="track-training-optimization">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Track 5: Model Training & Reducing ML Footprint</h2>
-            </div>
-            <div class="panel-body">
-                <p>
-                    Learn strategies for training models efficiently at different scales (small, medium, large), 
-                    optimizing resource usage, and delivering minimal-footprint models for deployment environments 
-                    with strict constraints.
-                </p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">Session</th>
-                            <th style="width: 20%">Topic</th>
-                            <th style="width: 20%">Objectives</th>
-                            <th style="width: 20%">Key Tools/Focus</th>
-                            <th style="width: 20%">References & Materials</th>
-                            <th style="width: 15%">Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Resource-Aware Training Fundamentals</td>
-                            <td>Analyze hardware constraints, profiling</td>
-                            <td>CPU vs. GPU vs. TPU, HPC basics</td>
-                            <td>
-                                <ul>
-                                    <li>Source 1: Ch. 4 (Training Data insights)</li>
-                                    <li>Cloud HPC docs (AWS, GCP, Azure)</li>
-                                </ul>
-                            </td>
-                            <td>Set the stage for optimization & cost control</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Data Sampling & Efficient Preprocessing</td>
-                            <td>Reduce training set size intelligently, compress data</td>
-                            <td>Subsampling, Data Augmentation, TFRecords</td>
-                            <td>Case study: “Using smaller but smarter data sets”</td>
-                            <td>Trade-offs in data quantity vs. quality</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Model Architecture Optimization</td>
-                            <td>Explore smaller & more efficient network designs</td>
-                            <td>MobileNet, EfficientNet, Distillation</td>
-                            <td>
-                                <ul>
-                                    <li>MobileNet/EfficientNet research papers</li>
-                                    <li>Source 2: Ch. 6 (Model Resource Mgmt)</li>
-                                </ul>
-                            </td>
-                            <td>Compare param counts, memory footprints</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Pruning & Quantization</td>
-                            <td>Reduce model size without losing critical performance</td>
-                            <td>TensorFlow Lite, ONNX, PyTorch Quantization APIs</td>
-                            <td>
-                                <ul>
-                                    <li>Examples of structured/unstructured pruning</li>
-                                    <li>Quantization aware training resources</li>
-                                </ul>
-                            </td>
-                            <td>Hands-on: prune & quantize a CNN model</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Distributed Training</td>
-                            <td>Accelerate training for large models/datasets</td>
-                            <td>Horovod, PyTorch DDP, Ray Train</td>
-                            <td>
-                                <ul>
-                                    <li>Official docs for distributed ML frameworks</li>
-                                    <li>Case study on HPC usage in ML</li>
-                                </ul>
-                            </td>
-                            <td>Focus on scaling horizontally while optimizing cost</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Edge & On-Device ML</td>
-                            <td>Deploy models to low-power devices</td>
-                            <td>TensorFlow Lite, Core ML, ONNX Runtime</td>
-                            <td>
-                                <ul>
-                                    <li>Source 1: Possibly “Reducing ML Footprint” sections</li>
-                                    <li>Mobile/Embedded device integration guides</li>
-                                </ul>
-                            </td>
-                            <td>Real-time constraints, offline inference</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Project & Final Evaluation</td>
-                            <td>Showcase a resource-optimized training pipeline</td>
-                            <td>All Tools Combined</td>
-                            <td>Guidelines, rubrics, peer feedback</td>
-                            <td>Demonstrate reduced footprint & cost savings</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Course 5: Generative AI (with RAG & Agentic AI) -->
+    <div class="course-section" id="course-generative-ai">
+        <div class="panel">
+            <h2>Course 5: Generative AI</h2>
+            <p>
+                Explore Large Language Models, Diffusion Models, and advanced concepts 
+                like Retrieval-Augmented Generation (RAG) and Agentic AI—all leveraging open-source tooling.
+            </p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Topic</th>
+                        <th style="width: 35%">Objective</th>
+                        <th style="width: 35%">Key Tools &amp; Focus (Open Source)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Foundations of Generative Models</td>
+                        <td>Understand core architectures (GANs, VAEs, Transformers)</td>
+                        <td>
+                            <ul>
+                                <li>PyTorch / TensorFlow Implementations</li>
+                                <li>Hugging Face Transformers</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Retrieval-Augmented Generation (RAG) Basics</td>
+                        <td>Combine LLMs with external knowledge sources</td>
+                        <td>
+                            <ul>
+                                <li>FAISS, Milvus (vector DBs)</li>
+                                <li>LangChain or Haystack for RAG pipelines</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Advanced RAG & Caching</td>
+                        <td>Optimize retrieval and reduce latency at scale</td>
+                        <td>
+                            <ul>
+                                <li>Hybrid retrieval methods (BM25 + embeddings)</li>
+                                <li>Document chunking & caching strategies</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Agentic AI Concepts</td>
+                        <td>Build autonomous agents using LLM-based reasoning</td>
+                        <td>
+                            <ul>
+                                <li>Auto-GPT or similar open-source frameworks</li>
+                                <li>Multi-step “planner-executor” designs</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Diffusion Models & Image Generation</td>
+                        <td>Train or fine-tune text-to-image models</td>
+                        <td>
+                            <ul>
+                                <li>Stable Diffusion (CompVis repo)</li>
+                                <li>Diffusers library by Hugging Face</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ethics & Responsible Use</td>
+                        <td>Address biases, content moderation, and safe generation</td>
+                        <td>
+                            <ul>
+                                <li>Open-source toxicity classification (e.g., Detoxify)</li>
+                                <li>Policy-based filtering (Rule-based or ML-based)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Deployment & Scaling of Generative Models</td>
+                        <td>Handle high concurrency and large model hosting</td>
+                        <td>
+                            <ul>
+                                <li>Kubeflow or Docker/K8s with GPU scheduling</li>
+                                <li>Model parallelism in PyTorch</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <!-- End of Content -->
-</div>
+</div><!-- /.container -->
 
-<!-- jQuery and Bootstrap -->
+<!-- jQuery and Bootstrap JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
